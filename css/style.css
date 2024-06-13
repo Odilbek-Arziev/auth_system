@@ -1,0 +1,33 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+}
+
+aside {
+    width: 20vw;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+    padding: 20px 0;
+    min-height: 10vh;
+}
+
+.task div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.is-done {
+    font-style: italic;
+    color: blue;
+    text-decoration: line-through;
+}

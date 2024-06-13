@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/bulma.min.css">
+    <script src="../js/script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content box">
+            <div class="modal-text">
+
+            </div>
+            <div class="buttons is-centered">
+                <button class="button is-success"></button>
+            </div>
+        </div>
+        <div class="modal-close is-large"></div>
+    </div>
+
+
+    <aside class="has-background-warning-light">
+        <div class="is-flex is-justify-content-space-between p-5">
+            <div>
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image">
+                            <img class="is-rounded" src="https://bulma.io/assets/images/placeholders/48x48.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="dropdown" onclick="this.classList.toggle('is-active')">
+                            <div class="dropdown-trigger is-clickable">
+                                <span class="title is-3">Admin</span>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">1</div>
+                                    <div class="dropdown-item">2</div>
+                                    <div class="dropdown-item">3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span class="is-size-3 is-clickable">
+                    <ion-icon name="notifications-outline"></ion-icon>
+                </span>
+                <span class="is-size-3 is-clickable">
+                    <ion-icon name="arrow-back-circle-outline"></ion-icon>
+                </span>
+            </div>
+        </div>
+        <ul class="p-5">
+            <li class="is-size-4 is-clickable" onclick="addTaskList()">
+                <ion-icon name="add-circle-outline"></ion-icon>
+                <span>Добавить новый список</span>
+            </li>
+            <li class="is-size-4 is-clickable">
+                <ion-icon name="search-outline"></ion-icon>
+                <span>Поиск</span>
+            </li>
+            <li class="is-size-4 is-clickable">
+                <div class="has-text-weight-bold">
+                    Все задачи
+                </div>
+                <ul class="tasks"></ul>
+            </li>
+        </ul>
+    </aside>
+    <div class="container p-6">
+        <div class="page is-hidden">
+            <div class="columns is-centered">
+                <div class="column is-6">
+                    <div class="title taskTitle ">
+                        Название списка задач
+                    </div>
+                    <div class="subtitle has-text-grey">
+                        Задач: <span class="count">0</span>
+                    </div>
+
+                    <button class="button addTask">
+                        Добавить задачу
+                    </button>
+
+                    <button class="button deleteAll is-warning">
+                        Удалить все
+                    </button>
+
+                    <form class="box addTaskForm is-hidden">
+                        <input type="text" class="input" name="taskName" placeholder="Название задачи">
+                        <div class="buttons is-centered my-3">
+                            <button class="button cancel">
+                                Отмена
+                            </button>
+                            <button class="button is-warning">
+                                Добавить задачу
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="taskList is-hidden">
+                        <div class="task is-hidden" onmouseenter="showButtons(event)" onmouseleave="showButtons(event)">
+                            <div>
+                                <input type="checkbox" class="checkbox" name="status">
+                                <div class="taskTitle">Test</div>
+                            </div>
+                            <div class="buttons is-hidden">
+                                <button class="button is-small" id="edit" onclick="editTask(this.dataset.id)">
+                                    edit
+                                </button>
+                                <button class="button is-small" id="delete" onclick="deleteTask(this.dataset.id)">
+                                    delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

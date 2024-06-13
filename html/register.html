@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Project</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/register.js" defer></script>
+</head>
+
+<body>
+    <div class="modal-container">
+        <div class="modal">
+            <span class="close">&times</span>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+    <form action="">
+        <div class="title">Регистрация</div>
+        <div class="field fullName">
+            <input type="text" placeholder="ФИО" name="fullName" class="input">
+        </div>
+
+        <div class="field email">
+            <input type="email" placeholder="Почта" name="email" class="input">
+        </div>
+
+        <div class="field password1">
+            <input type="password" placeholder="Пароль" name="password1" class="input">
+        </div>
+
+        <div class="field password2">
+            <input type="password" placeholder="Повторите пароль" name="password2" class="input">
+        </div>
+
+        <label class="terms">
+            <input type="checkbox" class="checkbox">
+            <span>Я принимаю</span>
+            <a href="">условия и соглашения</a>
+        </label>
+
+        <div class="passwords is-hiden">
+            <div class="check uppercase">
+                <div class="status">&#x2612</div>
+                <div class="status-text">
+                    Буква верхнего регистра
+                </div>
+            </div>
+
+            <div class="check lowercase">
+                <div class="status">&#x2612</div>
+                <div class="status-text">
+                    Буква нижнего регистра
+                </div>
+            </div>
+
+            <div class="check numbers">
+                <div class="status">&#x2612</div>
+                <div class="status-text">
+                    Цифра
+                </div>
+            </div>
+
+            <div class="check symbols">
+                <div class="status">&#x2612</div>
+                <div class="status-text">
+                    Спец символ
+                </div>
+            </div>
+            <div class="check len">
+                <div class="status">&#x2612</div>
+                <div class="status-text">
+                    Длина от 8 символов
+                </div>
+            </div>
+            <div class="check repeat">
+                <div class="status">&#x2612</div>
+                <div class="status-text">
+                    Пароли совпадают
+                </div>
+            </div>
+        </div>
+
+        <button class="button">Зарегистрироваться</button>
+
+        <div class="block">
+            <div class="text">Уже есть аккаунт?</div>
+            <a href="./login.html" class="redirect">Войти</a>
+        </div>
+
+    </form>
+</body>
+
+</html>
