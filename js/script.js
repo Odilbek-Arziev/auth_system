@@ -392,3 +392,4 @@ function editTaskList(id) {
         close()
     })
 }
+console.log('Param pam pam')
